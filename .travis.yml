@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: kxZtnF7pXwYaQHJ7IqFQWSsSk5sWEIXqnXqLBbvYAaIK9y2Vo7hpXhB62C/W931c1GZ8dt1PImBt5FFXHqgmvXZ0VGettGW85isdqYHRMJfHXt+uoDdeJCBFzCSAmX1S3zb5JfG0MWL5Ba0xniVNU0w3g6Xl1r3pWpld4D0FkPnWSbNDhnMg5aFCwcZ3pROUZXhlNj+ijJhsQ0bKq1KdHZ/yaGv9vBNPAr7C0/Sxc6SmpUuAJRH0y7Xeu1sIMxVtRIvE+fen9qF0+7180ciip55cSUo1QYXR5t83X/umBjLuLZlS53MDTXc1cWQ7NJvZ6OY/8wrunVc5zFbjrv/he8zOg407+CCLlp2a6/gdNFTc8o3+r3f/e51S70MN3J/SOlsqSHbtBx+1v0l4vRpSM72mSEFZlKt4Vdz3DBuxs9CYHIuNOoCGjtq8ulAqnR2rnuzWB/J+rJxDv+8dWTZ3LcMgpt7RqrEQ1rhm2BA4r9v3KTOIqONEvyuMPJJ44Rom+qri4VasXmf3daONG+LHUu476qvEoboN92doV+S/+hAI1shXiu31/hczUWJzJRGHbvkv51gEnn1gNJQIbc9hlYwr+LnZCK5UieAktl/zXBBsJBSX34UmA2Yi0DJgFug8rvNXEsI0ZMB3cNqQu+NDPbDLk5VfFGfEUfuLgRGsXW0=
+  app: aqueous-refuge-72329
+  on:
+    repo: NicolasMachado/node-intro-to-unit-testing
