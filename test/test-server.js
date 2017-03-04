@@ -179,7 +179,7 @@ describe('Recipes', function () {
   });
   it('should return a 400 status after POST if a field is missing', function() {
     const missingFieldsItems = [{}, {name: "coffee"}, {ingredients: ["coffee", "milk", "cup"]}];
-    return missingFieldsItems.forEach(function (object) { 
+    return missingFieldsItems.forEach(function (object) {
       chai.request(app)
       .post('/recipes')
       .send(object)
