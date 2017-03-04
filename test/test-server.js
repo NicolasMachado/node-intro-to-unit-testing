@@ -143,7 +143,7 @@ describe('Shopping List', function() {
   });
 });
 
-describe('/recipes', function () {
+describe('Recipes', function () {
 
   before(function() {
     return runServer(); 
@@ -177,6 +177,17 @@ describe('/recipes', function () {
         res.body.should.deep.equal(Object.assign(newItem, {id: res.body.id}));
       });
   });
+  it('should return a 400 status after POST if a field is missing', function() {
+    const missingFieldsItems = [{}, {name: "coffee"}, {ingredients: ["coffee", "milk", "cup"]}];
+    return missingFieldsItems.forEach(function (object) {
+      chai.request(app)
+      .post('/recipes')
+      .send(object)
+      .catch(function(res) {
+        res.should.have.status(400);
+      });
+    });
+  });
   // PUT
   it('should update recipe on PUT', function() {
     const updateData = {
@@ -198,7 +209,6 @@ describe('/recipes', function () {
         res.body.should.deep.equal(updateData);
       });
   });
-
   // DELETE
   it('should delete items on DELETE', function() {
     return chai.request(app)
