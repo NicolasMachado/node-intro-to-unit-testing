@@ -183,7 +183,7 @@ describe('Recipes', function () {
       chai.request(app)
       .post('/recipes')
       .send(object)
-      .catch(function(res) {
+      .catch(function(res) { // can't use a promise because it never resolves?
         res.should.have.status(400);
       });
     });
